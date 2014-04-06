@@ -37,5 +37,17 @@
 	background-color: grey;
 }
 .photo {
-	background-image: url("http://lorempixel.com/200/200")
+	background-image: url("http://lorempixel.com/200/200");
+	width: 200;
+	height: 200;
+	margin: 10;
+}
+.caption {
+	width: 200;
+	height: 15;
+	background-color: black;
+	color: white;
+	position: absolute;
+	left: 20;
+	top: 410;
 }
