@@ -1,7 +1,7 @@
 body {
 	background: black;
 }
-p {
+p,li {
 	color: grey;
 }
 h1,h2,h3 {
