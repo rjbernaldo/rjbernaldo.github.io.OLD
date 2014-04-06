@@ -51,3 +51,6 @@
 	left: 20;
 	top: 410;
 }
+#content div:hover {
+	color: green;
+}
