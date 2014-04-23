@@ -1,15 +1,19 @@
+<!DOCTYPE html>
 <html>
-<head>
-	<link rel="stylesheet" type="text/css" href="unit1_projects/class1/completed/stylesheets/reset.css">
-	<link rel="stylesheet" type="text/css" href="./main.css">
-</head>
-<body>
-	<div id="main">
-		<header>
-			Differences between Relative, Absolute, & Fixed Positioning?
-		</header>
-		<div id="content">
-			<p>I picked this topic because this is was once confusing for me. I hope to get better at CSS styling by tackling all the topics I am unfamiliar of.</p>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{{ page.title }}</title>
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="/css/syntax.css">
+        <link rel="stylesheet" href="/css/main.css">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    </head>
+    <body>
+      <div id="main" class="site">
+      	<h1>Differences between Relative, Absolute, & Fixed Positioning?</h1>
+        <p>I picked this topic because this is was once confusing for me. I hope to get better at CSS styling by tackling all the topics I am unfamiliar of.</p>
 			<br>
 			<h1>Relative:</h1>
 			<p>Think of it this way: this element is static, and then you move it relative to this static position. For example: left: 10px will move the element 10px relative to the position it was originally in.
@@ -21,24 +25,36 @@
 			<br>
 			<h1>Fixed:</h1>
 			<p>Fixed means it is positioned relative to the current viewport or browser window itself.</p>
-		</div>
-	</div>
-	<div id="nav">
-		<h1>Week 1</h1>
-		<ul>
-			<li><a href="unit1_projects/dbc1.html">Introduction</a></li>
-			<li><a href="unit1_projects/blogpost1.html">First blogpost</a></li>
-			<li><a href="unit1_projects/wireframe_sites.html">Wireframing</a></li>
-			<li><a href="unit1_projects/week1_cultural_blog.html">Cultural blog</a></li>
-			<li><a href="unit1_projects/dbc2.html">First solo challenge</a></li>
-			<li><a href="https://gist.github.com/rjbernaldo/12de16b94459230bd2cd">Reflections page</a></li>
-		</ul>
-		<br>
-		<h1>Week 2</h2>
-		<ul>
-			<li><a href="week2_technical.html">Blog</a></li>
-			<li><a href="my_wireframe.html">My Wireframe</a></li>
-		</ul>
-	</div>
-</body>
-</html>	
+      </div>
+      <div id="main2" class="nav">
+        <a href="/index.html"><div class="header">
+        </div></a>
+        <div class="header2">
+          <h2>Rj Bernaldo</h2>
+          Student at Dev Boot Camp
+        </div>
+        <ul class="posts">
+          {% for post in site.posts %}
+            <li>
+              <h5><a href="{{ post.url }}">{{ post.title }}</a></h5><h6>{{ post.date | date_to_string }}</h6>
+            </li>
+          {% endfor %}
+          <li><a href="week3_cultural.html"><h5>Cultural Blog</h5><h6>Week 3</h6></a></li>
+          <li><a href="week3_technical.html"><h5>Technical Blog</h5><h6>Week 3</h6></a></li>
+      
+          <li><a href="my_wireframe.html"><h5>My Wireframe</h5></a><h6>Week 2</h6></li>
+          <li><a href="week2_technical.html"><h5>Blog</h5></a><h6>Week 2</h6></li>
+      
+          <li><a href="https://gist.github.com/rjbernaldo/12de16b94459230bd2cd"><h5>Reflections page</h5><h6>Week 1</h6></a></li>
+          <li><a href="unit1_projects/dbc2.html"><h5>First solo challenge</h5><h6>Week 1</h6></a></li>
+          <li><a href="unit1_projects/week1_cultural_blog.html"><h5>Cultural blog</h5><h6>Week 1</h6></a></li>
+          <li><a href="unit1_projects/wireframe_sites.html"><h5>Wireframing</h5><h6>Week 1</h6></a></li>
+          <li><a href="unit1_projects/blogpost1.html"><h5>First blogpost</h5><h6>Week 1</h6></a></li>
+          <li><a href="unit1_projects/dbc1.html"><h5>Introduction</h5><h6>Week 1</h6></a></li>
+        </ul>
+      </div>
+      <div id="trigger"><i id="icn" class="fa fa-arrow-circle-o-left fa-2x"></i></div>
+
+      <script src="/nav.js"></script>
+    </body>
+</html>

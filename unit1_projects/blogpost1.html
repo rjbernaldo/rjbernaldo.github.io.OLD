@@ -1,14 +1,18 @@
+<!DOCTYPE html>
 <html>
-<head>
-	<link rel="stylesheet" type="text/css" href="unit1_projects/class1/completed/stylesheets/reset.css">
-	<link rel="stylesheet" type="text/css" href="./main.css">
-</head><body>
-	<div id="main">
-		<header>
-			<h1>Comparing Websites</h1>
-		</header>
-		<div id="content">
-			
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{{ page.title }}</title>
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="/css/syntax.css">
+        <link rel="stylesheet" href="/css/main.css">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    </head>
+    <body>
+      <div id="main" class="site">
+       		<h1>Comparing Websites</h1>
 		<h2>My three favorite websites are:</h2>
 		<ul>
 			<li>Google</li>
@@ -19,24 +23,36 @@
 		<p><b>Google</b> is the simplest website I know. Users come to this website for one purpose: lookup. There were other search engines before this like Yahoo, etc. But I believe Google won because of how simple it is. Good user experience is about giving the user what he or she needs in the easiest and fastest way possible, and google has succesfully done this.</p>
 		<p><b>Soundcloud</b> has got to be the the coolest website I know. Everything about it is awesome! From the visual diagram of the audio, to the simple things like embedding the current audio playing on your browser as to not interrupt the sound when viewing other pages. It is the simple things that matter!</p>
 		<p><b>Youtube</b> - what can I say. This web app has replaced TV for me. Sometimes I miss television and its random channels, but I cant deny that YT is one of the game changing web apps that have altered our lives (in terms of media consumption) forever. YT started of as just a simple video streaming service, but slowly, I am noticing that they are improving more and more. For once instance, I was searching for a particular music video, and the search result already generated a playlist for me to play contiously based on what others have been viewing after searching for the same query. So cool.</p>
-		</div>
-	</div>
-	<div id="nav">
-		<h1>Week 1</h1>
-		<ul>
-			<li><a href="unit1_week1/dbc1.html">Introduction</a></li>
-			<li><a href="unit1_week1/blogpost1.html">First blogpost</a></li>
-			<li><a href="unit1_week1/wireframe_sites.html">Wireframing</a></li>
-			<li><a href="unit1_week1/week1_cultural_blog.html">Cultural blog</a></li>
-			<li><a href="unit1_week1/dbc2.html">First solo challenge</a></li>
-			<li><a href="https://gist.github.com/rjbernaldo/12de16b94459230bd2cd">Reflections page</a></li>
-		</ul>
-		<br>
-		<h1>Week 2</h2>
-		<ul>
-			<li><a href="week2_technical.html">Blog</a></li>
-			<li><a href="my_wireframe.html">My Wireframe</a></li>
-		</ul>
-	</div>
-</body>
-</html>	
+      </div>
+      <div id="main2" class="nav">
+        <a href="/index.html"><div class="header">
+        </div></a>
+        <div class="header2">
+          <h2>Rj Bernaldo</h2>
+          Student at Dev Boot Camp
+        </div>
+        <ul class="posts">
+          {% for post in site.posts %}
+            <li>
+              <h5><a href="{{ post.url }}">{{ post.title }}</a></h5><h6>{{ post.date | date_to_string }}</h6>
+            </li>
+          {% endfor %}
+          <li><a href="week3_cultural.html"><h5>Cultural Blog</h5><h6>Week 3</h6></a></li>
+          <li><a href="week3_technical.html"><h5>Technical Blog</h5><h6>Week 3</h6></a></li>
+      
+          <li><a href="my_wireframe.html"><h5>My Wireframe</h5></a><h6>Week 2</h6></li>
+          <li><a href="week2_technical.html"><h5>Blog</h5></a><h6>Week 2</h6></li>
+      
+          <li><a href="https://gist.github.com/rjbernaldo/12de16b94459230bd2cd"><h5>Reflections page</h5><h6>Week 1</h6></a></li>
+          <li><a href="unit1_projects/dbc2.html"><h5>First solo challenge</h5><h6>Week 1</h6></a></li>
+          <li><a href="unit1_projects/week1_cultural_blog.html"><h5>Cultural blog</h5><h6>Week 1</h6></a></li>
+          <li><a href="unit1_projects/wireframe_sites.html"><h5>Wireframing</h5><h6>Week 1</h6></a></li>
+          <li><a href="unit1_projects/blogpost1.html"><h5>First blogpost</h5><h6>Week 1</h6></a></li>
+          <li><a href="unit1_projects/dbc1.html"><h5>Introduction</h5><h6>Week 1</h6></a></li>
+        </ul>
+      </div>
+      <div id="trigger"><i id="icn" class="fa fa-arrow-circle-o-left fa-2x"></i></div>
+
+      <script src="/nav.js"></script>
+    </body>
+</html>

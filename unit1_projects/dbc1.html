@@ -1,42 +1,58 @@
+<!DOCTYPE html>
 <html>
-<head>
-	<link rel="stylesheet" type="text/css" href="unit1_projects/class1/completed/stylesheets/reset.css">
-	<link rel="stylesheet" type="text/css" href="./main.css">
-</head>
-<body>
-	<div id="main">
-		<header>
-			<h1>Rj Bernaldo</h1>
-		</header>
-		<div id="content">
-		<h2>Personal History</h2>
-		<p>Born and raised in the Philippines. Graduated from Multimedia Arts. I can safely say that I picked the wrong course - LOL. Currently working at a tech startup named Aarki. Moved departments 3 times - what!</p>
-		<ul>
-			<li><h3>Multimedia Specialist</h3><br><i>My first position.</i> Found myself wanting to help out in building our product rather than using it to make projects.</li>
-			<li><h3>Ad Ops</h3><br><b>Second!</b> Wanted something technical, but did not know where to start. I mostly used my off-time at this position to teach myself programming. This stage is where I found DBC.</li>
-			<li><h3>Front End Engineer</h3><br>Finally! After lots of studying on my own, our CEO finally agreed to transfer me into the software engineer team! Right now, I handle mostly Javascript stuff. My position is somewhat of a hybrid role since I am not that good yet - part JS developer, part product manager. It is confusing and very frustrating at times, especially since I only want to focus on the building part!</li>
-		</ul>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{{ page.title }}</title>
+        <meta name="viewport" content="width=device-width">
 
-		<h2>For additional requirements:</h2>
-		<p>Link that opens in the <a href="www.google.com" target="_self">same window</a>, a <a href="www.google.com" target="_blank">new window</a>, and <a href="mailto:rj.bernaldo@gmail.com">my email address</a>.</p>
-		</div>
-	</div>
-	<div id="nav">
-		<h1>Week 1</h1>
-		<ul>
-			<li><a href="unit1_week1/dbc1.html">Introduction</a></li>
-			<li><a href="unit1_week1/blogpost1.html">First blogpost</a></li>
-			<li><a href="unit1_week1/wireframe_sites.html">Wireframing</a></li>
-			<li><a href="unit1_week1/week1_cultural_blog.html">Cultural blog</a></li>
-			<li><a href="unit1_week1/dbc2.html">First solo challenge</a></li>
-			<li><a href="https://gist.github.com/rjbernaldo/12de16b94459230bd2cd">Reflections page</a></li>
-		</ul>
-		<br>
-		<h1>Week 2</h2>
-		<ul>
-			<li><a href="week2_technical.html">Blog</a></li>
-			<li><a href="my_wireframe.html">My Wireframe</a></li>
-		</ul>
-	</div>
-</body>
-</html>	
+        <link rel="stylesheet" href="/css/syntax.css">
+        <link rel="stylesheet" href="/css/main.css">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    </head>
+    <body>
+      <div id="main" class="site">
+          <h1>Rj Bernaldo</h1>
+    <h2>Personal History</h2>
+    <p>Born and raised in the Philippines. Graduated from Multimedia Arts. I can safely say that I picked the wrong course - LOL. Currently working at a tech startup named Aarki. Moved departments 3 times - what!</p>
+    <ul>
+      <li><h3>Multimedia Specialist</h3><br><i>My first position.</i> Found myself wanting to help out in building our product rather than using it to make projects.</li>
+      <li><h3>Ad Ops</h3><br><b>Second!</b> Wanted something technical, but did not know where to start. I mostly used my off-time at this position to teach myself programming. This stage is where I found DBC.</li>
+      <li><h3>Front End Engineer</h3><br>Finally! After lots of studying on my own, our CEO finally agreed to transfer me into the software engineer team! Right now, I handle mostly Javascript stuff. My position is somewhat of a hybrid role since I am not that good yet - part JS developer, part product manager. It is confusing and very frustrating at times, especially since I only want to focus on the building part!</li>
+    </ul>
+
+    <h2>For additional requirements:</h2>
+    <p>Link that opens in the <a href="www.google.com" target="_self">same window</a>, a <a href="www.google.com" target="_blank">new window</a>, and <a href="mailto:rj.bernaldo@gmail.com">my email address</a>.</p>
+      </div>
+      <div id="main2" class="nav">
+        <a href="/index.html"><div class="header">
+        </div></a>
+        <div class="header2">
+          <h2>Rj Bernaldo</h2>
+          Student at Dev Boot Camp
+        </div>
+        <ul class="posts">
+          {% for post in site.posts %}
+            <li>
+              <h5><a href="{{ post.url }}">{{ post.title }}</a></h5><h6>{{ post.date | date_to_string }}</h6>
+            </li>
+          {% endfor %}
+          <li><a href="week3_cultural.html"><h5>Cultural Blog</h5><h6>Week 3</h6></a></li>
+          <li><a href="week3_technical.html"><h5>Technical Blog</h5><h6>Week 3</h6></a></li>
+      
+          <li><a href="my_wireframe.html"><h5>My Wireframe</h5></a><h6>Week 2</h6></li>
+          <li><a href="week2_technical.html"><h5>Blog</h5></a><h6>Week 2</h6></li>
+      
+          <li><a href="https://gist.github.com/rjbernaldo/12de16b94459230bd2cd"><h5>Reflections page</h5><h6>Week 1</h6></a></li>
+          <li><a href="unit1_projects/dbc2.html"><h5>First solo challenge</h5><h6>Week 1</h6></a></li>
+          <li><a href="unit1_projects/week1_cultural_blog.html"><h5>Cultural blog</h5><h6>Week 1</h6></a></li>
+          <li><a href="unit1_projects/wireframe_sites.html"><h5>Wireframing</h5><h6>Week 1</h6></a></li>
+          <li><a href="unit1_projects/blogpost1.html"><h5>First blogpost</h5><h6>Week 1</h6></a></li>
+          <li><a href="unit1_projects/dbc1.html"><h5>Introduction</h5><h6>Week 1</h6></a></li>
+        </ul>
+      </div>
+      <div id="trigger"><i id="icn" class="fa fa-arrow-circle-o-left fa-2x"></i></div>
+
+      <script src="/nav.js"></script>
+    </body>
+</html>
