@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Rj Bernaldo's Blog</title>
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="/css/syntax.css">
+        <link rel="stylesheet" href="/css/main.css">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    </head>
+    <body>
+      <div id="main" class="site">
+        
+
+
+<h1>Enumerable: Group By</h1>
+<p>Group By is a very interesting method to help group data using specific rules. It basically groups the output according to what elements fit a specific declared rule. As an example:</p>
+
+<p>1) Group the collection of integers together using their result + 1 as their key</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="n">collection</span> <span class="o">=</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="o">]</span>
+<span class="n">collection</span><span class="o">.</span><span class="n">group_by</span> <span class="p">{</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">}</span>
+ <span class="o">=&gt;</span> <span class="p">{</span><span class="mi">2</span><span class="o">=&gt;[</span><span class="mi">1</span><span class="o">]</span><span class="p">,</span> <span class="mi">3</span><span class="o">=&gt;[</span><span class="mi">2</span><span class="o">]</span><span class="p">,</span> <span class="mi">4</span><span class="o">=&gt;[</span><span class="mi">3</span><span class="o">]</span><span class="p">,</span> <span class="mi">5</span><span class="o">=&gt;[</span><span class="mi">4</span><span class="o">]</span><span class="p">,</span> <span class="mi">6</span><span class="o">=&gt;[</span><span class="mi">5</span><span class="o">]</span><span class="p">}</span>
+</code></pre></div>
+
+<p>2) Group the collection according to % 2</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="n">collection</span> <span class="o">=</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="o">]</span>
+<span class="n">collection</span><span class="o">.</span><span class="n">group_by</span> <span class="p">{</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span><span class="p">}</span>
+ <span class="o">=&gt;</span> <span class="p">{</span><span class="mi">1</span><span class="o">=&gt;[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="o">]</span><span class="p">,</span> <span class="mi">0</span><span class="o">=&gt;[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="o">]</span><span class="p">}</span>
+</code></pre></div>
+
+<p>3) Group the collection according to if element == 3</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="n">collection</span> <span class="o">=</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="o">]</span>
+<span class="n">collection</span><span class="o">.</span><span class="n">group_by</span> <span class="p">{</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">3</span><span class="p">}</span>
+ <span class="o">=&gt;</span> <span class="p">{</span><span class="kp">false</span><span class="o">=&gt;[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="o">]</span><span class="p">,</span> <span class="kp">true</span><span class="o">=&gt;[</span><span class="mi">3</span><span class="o">]</span><span class="p">}</span> 
+</code></pre></div>
+
+<p>Some of these examples are pointless (like the 3rd one), I just wanted to show you what the result was if you put in a boolean as a rule to the grouping.</p>
+
+      </div>
+      <div id="main2" class="nav">
+        <a href="/index.html"><div class="header">
+        </div></a>
+        <div class="header2">
+          <h2>Rj Bernaldo</h2>
+          Student at Dev Boot Camp
+        </div>
+        <ul class="posts">
+          
+            <li>
+              <h5><a href="/update/2014/04/27/technical-blog.html">Enumerable: Group By</a></h5><h6>27 Apr 2014</h6>
+            </li>
+          
+            <li>
+              <h5><a href="/update/2014/04/27/cultural-blog.html">Dealing with Conflict</a></h5><h6>27 Apr 2014</h6>
+            </li>
+          
+            <li>
+              <h5><a href="/update/2014/04/23/new-website.html">New Github Page</a></h5><h6>23 Apr 2014</h6>
+            </li>
+          
+          <li><a href="week3_cultural.html"><h5>Cultural Blog</h5><h6>Week 3</h6></a></li>
+          <li><a href="week3_technical.html"><h5>Technical Blog</h5><h6>Week 3</h6></a></li>
+      
+          <li><a href="my_wireframe.html"><h5>My Wireframe</h5></a><h6>Week 2</h6></li>
+          <li><a href="week2_technical.html"><h5>Blog</h5></a><h6>Week 2</h6></li>
+      
+          <li><a href="https://gist.github.com/rjbernaldo/12de16b94459230bd2cd"><h5>Reflections page</h5><h6>Week 1</h6></a></li>
+          <li><a href="unit1_projects/dbc2.html"><h5>First solo challenge</h5><h6>Week 1</h6></a></li>
+          <li><a href="unit1_projects/week1_cultural_blog.html"><h5>Cultural blog</h5><h6>Week 1</h6></a></li>
+          <li><a href="unit1_projects/wireframe_sites.html"><h5>Wireframing</h5><h6>Week 1</h6></a></li>
+          <li><a href="unit1_projects/blogpost1.html"><h5>First blogpost</h5><h6>Week 1</h6></a></li>
+          <li><a href="unit1_projects/dbc1.html"><h5>Introduction</h5><h6>Week 1</h6></a></li>
+        </ul>
+      </div>
+      <div id="trigger"><i id="icn" class="fa fa-arrow-circle-o-left fa-2x"></i></div>
+
+      <script src="/nav.js"></script>
+    </body>
+</html>
