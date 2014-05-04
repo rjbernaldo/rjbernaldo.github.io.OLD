@@ -15,31 +15,20 @@
         
 
 
-<h1>Enumerable: Group By</h1>
-<p>Group By is a very interesting method to help group data using specific rules. It basically groups the output according to what elements fit a specific declared rule. As an example:</p>
+<h1>Issues in Tech</h1>
+<ul>
+<li><h3>Identify a problem facing the tech world</h3>
 
-<p>1) Group the collection of integers together using their result + 1 as their key</p>
+<p>One problem is the fact that even though web applications can be made to be used globally, there are still regional restrictions before it can become succesfull around the world.</p></li>
+<li><h3>Explain why it is a problem and some background</h3>
 
-<div class="highlight"><pre><code class="ruby"><span class="n">collection</span> <span class="o">=</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="o">]</span>
-<span class="n">collection</span><span class="o">.</span><span class="n">group_by</span> <span class="p">{</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">}</span>
- <span class="o">=&gt;</span> <span class="p">{</span><span class="mi">2</span><span class="o">=&gt;[</span><span class="mi">1</span><span class="o">]</span><span class="p">,</span> <span class="mi">3</span><span class="o">=&gt;[</span><span class="mi">2</span><span class="o">]</span><span class="p">,</span> <span class="mi">4</span><span class="o">=&gt;[</span><span class="mi">3</span><span class="o">]</span><span class="p">,</span> <span class="mi">5</span><span class="o">=&gt;[</span><span class="mi">4</span><span class="o">]</span><span class="p">,</span> <span class="mi">6</span><span class="o">=&gt;[</span><span class="mi">5</span><span class="o">]</span><span class="p">}</span>
-</code></pre></div>
+<p>Not all people in countries outside of the US are willing to spend money online. A lot of people from my country (Philippines) still prefer to buy from real shops and choose to get the free stuff (in terms of software) instead of spending online.</p>
 
-<p>2) Group the collection according to % 2</p>
+<p>This is due to the fact that people still do not trust the internet. I just feel that if the attitude of everyone in the world changes, technology can advance so much faster.</p></li>
+<li><h3>Hypothesize about potential solutions</h3>
 
-<div class="highlight"><pre><code class="ruby"><span class="n">collection</span> <span class="o">=</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="o">]</span>
-<span class="n">collection</span><span class="o">.</span><span class="n">group_by</span> <span class="p">{</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span><span class="p">}</span>
- <span class="o">=&gt;</span> <span class="p">{</span><span class="mi">1</span><span class="o">=&gt;[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="o">]</span><span class="p">,</span> <span class="mi">0</span><span class="o">=&gt;[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="o">]</span><span class="p">}</span>
-</code></pre></div>
-
-<p>3) Group the collection according to if element == 3</p>
-
-<div class="highlight"><pre><code class="ruby"><span class="n">collection</span> <span class="o">=</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="o">]</span>
-<span class="n">collection</span><span class="o">.</span><span class="n">group_by</span> <span class="p">{</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">3</span><span class="p">}</span>
- <span class="o">=&gt;</span> <span class="p">{</span><span class="kp">false</span><span class="o">=&gt;[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="o">]</span><span class="p">,</span> <span class="kp">true</span><span class="o">=&gt;[</span><span class="mi">3</span><span class="o">]</span><span class="p">}</span> 
-</code></pre></div>
-
-<p>Hope I was able to shed some light on a new method!</p>
+<p>Best way around this is to teach them. Give them a reliable service they can&#39;t ignore.</p></li>
+</ul>
 
       </div>
       <div id="main2" class="nav">
@@ -50,6 +39,14 @@
           Student at Dev Boot Camp
         </div>
         <ul class="posts">
+          
+            <li>
+              <h5><a href="/update/2014/05/05/cultural-blog.html">Issues in Tech</a></h5><h6>05 May 2014</h6>
+            </li>
+          
+            <li>
+              <h5><a href="/update/2014/05/01/technical-blog.html">Ruby Classes</a></h5><h6>01 May 2014</h6>
+            </li>
           
             <li>
               <h5><a href="/update/2014/04/27/technical-blog.html">Enumerable: Group By</a></h5><h6>27 Apr 2014</h6>
