@@ -15,36 +15,34 @@
         
 
 
-<h1>Functional vs Object-Oriented</h1>
-<p>In my opinion, Object-Oriented Programming is more fun to work on than Functional Programming. Take note though that both of these have a purpose and each of them has their own advantages and disadvantages. I believe the best way to show it is through practical examples.</p>
+<h1>SQL Issues</h1>
+<h2>Look up issues with SQL (specifically SQL Injection) Enjoy this XKCD comic for an amusing intro. What is it? Why is it a problem? What can newb programmers do to combat this issue?</h2>
 
-<p>Lets start off with Functional Programming. This is a programming style where you simply code on how you want your script to act on an specific instance.</p>
+<p>Basically, SQL injection is a &quot;code injection&quot; technique where malicious SQL statements are inserted into entry fields for execution. 
+According to <a href="https://www.owasp.org/index.php/SQL_Injection_Prevention_Cheat_Sheet">this code injection cheat sheet</a>, there are various steps to shield your database from the issue mentioned above:</p>
 
-<div class="highlight"><pre><code class="ruby"><span class="n">colors</span> <span class="o">=</span> <span class="p">{</span><span class="ss">:first</span> <span class="o">=&gt;</span> <span class="s2">&quot;Red&quot;</span><span class="p">,</span> <span class="ss">:second</span> <span class="o">=&gt;</span> <span class="s2">&quot;Blue&quot;</span><span class="p">,</span> <span class="ss">:third</span> <span class="o">=&gt;</span> <span class="s2">&quot;Green&quot;</span><span class="p">}</span>
-<span class="nb">p</span> <span class="n">colors</span>
-<span class="c1"># =&gt; {:first =&gt; &quot;Red&quot;, :second =&gt; &quot;Blue&quot;, :third =&gt; &quot;Green&quot;}</span>
-<span class="nb">p</span> <span class="n">colors</span><span class="o">[</span><span class="ss">:first</span><span class="o">]</span>
-<span class="c1"># =&gt; &quot;Red&quot;</span>
-</code></pre></div>
+<h3>1) Use prepared statements</h3>
 
-<p>Object Oriented Programming on the other hand considers each part of your code an &quot;Object&quot;. This means that each of them will have their own state and methods. For the example below, instead of assigning colors to a value, each color has it&#39;s own variable @name (this is called an instance variable) and its own method display (this is called an instance method)</p>
+<p>For SQLite3, <a href="http://www.sqlite.org/c3ref/stmt.html">it is mentioned</a> that you should use SQL Statement Objects for greater safety. Instead of using dynamic values when asking for queries, each query is prepared before use on the database.</p>
 
-<div class="highlight"><pre><code class="ruby"><span class="k">class</span> <span class="nc">Color</span>
-    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-        <span class="vi">@name</span> <span class="o">=</span> <span class="nb">name</span>
-    <span class="k">end</span>
-    <span class="k">def</span> <span class="nf">display</span>
-        <span class="nb">p</span> <span class="vi">@name</span>
-    <span class="k">end</span>
-<span class="k">end</span>
+<h3>2) Use stored procedures</h3>
 
-<span class="n">colors</span> <span class="o">=</span> <span class="p">{</span><span class="ss">:first</span> <span class="o">=&gt;</span> <span class="no">Color</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;Red&quot;</span><span class="p">),</span> <span class="ss">:second</span> <span class="o">=&gt;</span> <span class="no">Color</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;Blue&quot;</span><span class="p">),</span> <span class="ss">:third</span> <span class="o">=&gt;</span> <span class="no">Color</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;Green&quot;</span><span class="p">)</span> <span class="p">}</span>
+<p>This is similar to the step above. Basically define the code first, then pass parameters later. The only difference is that the query code itself is stored inside the database to be used later on.</p>
 
-<span class="n">colors</span><span class="o">[</span><span class="ss">:first</span><span class="o">].</span><span class="n">display</span>
-<span class="c1"># =&gt; &quot;Red&quot;</span>
-</code></pre></div>
+<h3>3) Escape all user supplied input</h3>
 
-<p>As you can see, each color now has it&#39;s own name and display method. Hope I was able to shed some light on the difference of Functional Programming and OOP.</p>
+<p>This method forgoes all user supplied input. This method is not recommended. This is mostly used to retrofit legacy code into a newer application.</p>
+
+<h2>Compare SQL databases with NoSQL databases. What are the pros and cons of either? Which are you most excited to work with and why?</h2>
+
+<p>SQL databases are mostly formatted using a table, and noSQL databases are formatted using the following: document based, key-value pairs, etc.
+SQL databases have a predefined schema, while noSQL databases do not.
+SQL databases are vertically scalable, and noSQL databases are horizontally scalable.
+SQL databases use SQL (Structured Query Language) for defining and manipulating data, noSQL uses an unstructed query to traverse it&#39;s collection of data.</p>
+
+<p>I am most excited to work with SQL databases, as I have been been using non-structured databases all my life. I have been accustomed to collecting and manipulating data in my own way, and it has it&#39;s big list of faults. I am looking forward to learning more about SQL to eliminate all the problems I have encountered using non-SQL ways of storing data.</p>
+
+<h2>Imagine having a huge database with millions of entries. It would probably take a lot of time to run advanced queries on such a large dataset. What are some of the things you can do to optimize SQL queries?</h2>
 
       </div>
       <div id="main2" class="nav">
@@ -55,6 +53,14 @@
           Student at Dev Boot Camp
         </div>
         <ul class="posts">
+          
+            <li>
+              <h5><a href="/update/2014/05/15/technical-blog.html">SQL Issues</a></h5><h6>15 May 2014</h6>
+            </li>
+          
+            <li>
+              <h5><a href="/update/2014/05/15/cultural-blog.html">Affirmation and Stereotype Threat</a></h5><h6>15 May 2014</h6>
+            </li>
           
             <li>
               <h5><a href="/update/2014/05/08/technical-blog.html">Functional vs Object-Oriented</a></h5><h6>08 May 2014</h6>
