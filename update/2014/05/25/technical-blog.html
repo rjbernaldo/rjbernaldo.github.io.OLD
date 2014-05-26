@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Rj Bernaldo's Blog</title>
+        <title>What is Rails</title>
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="/css/syntax.css">
@@ -12,37 +12,28 @@
     </head>
     <body>
       <div id="main" class="site">
-        
+        <h1>What is Rails</h1>
+<!--<p class="meta">25 May 2014</p>-->
 
+<div class="post">
+<h2>Overview</h2>
 
-<h1>SQL Issues</h1>
-<h2>Look up issues with SQL (specifically SQL Injection) Enjoy this XKCD comic for an amusing intro. What is it? Why is it a problem? What can newb programmers do to combat this issue?</h2>
+<p>Ruby on Rails, or simply - Rails, is an open source web framework built using the language Ruby. It is a full stack framework (front-end to back-end) and as a result, it features a routing system that is independent of the web server it is hosted on.</p>
 
-<p>Basically, SQL injection is a &quot;code injection&quot; technique where malicious SQL statements are inserted into entry fields for execution. 
-According to <a href="https://www.owasp.org/index.php/SQL_Injection_Prevention_Cheat_Sheet">this code injection cheat sheet</a>, there are various steps to shield your database from the issue mentioned above:</p>
+<p>Like other web-frameworks, RoR uses the Model-View-Controller pattern to organize application programming. Here is a basic description of what each part is responsible of:
+- Model: Maps to a table in the server&#39;s database
+- Controller: This responds to external requests to the server and determines which view file to render. The controller is also responsible for getting information from the Model to display at the view. 
+- View: This is basically what the user sees on his or her browser.</p>
 
-<h3>1) Use prepared statements</h3>
+<h2>History</h2>
 
-<p>For SQLite3, <a href="http://www.sqlite.org/c3ref/stmt.html">it is mentioned</a> that you should use SQL Statement Objects for greater safety. Instead of using dynamic values when asking for queries, each query is prepared before use on the database.</p>
+<p>This was originally created by David Hansson from his work on Basecamp. It was released July 2004.</p>
 
-<h3>2) Use stored procedures</h3>
+<h2>Philosophy &amp; Design</h2>
 
-<p>This is similar to the step above. Basically define the code first, then pass parameters later. The only difference is that the query code itself is stored inside the database to be used later on.</p>
+<p>Rails is intended to emphasize Convention over Configuration, and the Dont Repeat Yourself Principle. It is important to remember to have &quot;Fat models and skinny controllers&quot; when creating your web application.</p>
 
-<h3>3) Escape all user supplied input</h3>
-
-<p>This method forgoes all user supplied input. This method is not recommended. This is mostly used to retrofit legacy code into a newer application.</p>
-
-<h2>Compare SQL databases with NoSQL databases. What are the pros and cons of either? Which are you most excited to work with and why?</h2>
-
-<p>SQL databases are mostly formatted using a table, and noSQL databases are formatted using the following: document based, key-value pairs, etc.
-SQL databases have a predefined schema, while noSQL databases do not.
-SQL databases are vertically scalable, and noSQL databases are horizontally scalable.
-SQL databases use SQL (Structured Query Language) for defining and manipulating data, noSQL uses an unstructed query to traverse it&#39;s collection of data.</p>
-
-<p>I am most excited to work with SQL databases, as I have been been using non-structured databases all my life. I have been accustomed to collecting and manipulating data in my own way, and it has it&#39;s big list of faults. I am looking forward to learning more about SQL to eliminate all the problems I have encountered using non-SQL ways of storing data.</p>
-
-<h2>Imagine having a huge database with millions of entries. It would probably take a lot of time to run advanced queries on such a large dataset. What are some of the things you can do to optimize SQL queries?</h2>
+</div>
 
       </div>
       <div id="main2" class="nav">
@@ -53,6 +44,18 @@ SQL databases use SQL (Structured Query Language) for defining and manipulating 
           Student at Dev Boot Camp
         </div>
         <ul class="posts">
+          
+            <li>
+              <h5><a href="/update/2014/05/25/unit-3-cheat-sheet.html">Looping</a></h5><h6>25 May 2014</h6>
+            </li>
+          
+            <li>
+              <h5><a href="/update/2014/05/25/technical-blog.html">What is Rails</a></h5><h6>25 May 2014</h6>
+            </li>
+          
+            <li>
+              <h5><a href="/update/2014/05/25/cultural-blog.html">Fireside Chat</a></h5><h6>25 May 2014</h6>
+            </li>
           
             <li>
               <h5><a href="/update/2014/05/15/technical-blog.html">SQL Issues</a></h5><h6>15 May 2014</h6>
